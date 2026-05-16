@@ -17,7 +17,7 @@ const loadLeaderboard =
 
       const response =
         await fetch(
-          "http://localhost:8000/api/leaderboard/jee"
+          "https://qore-backend.onrender.com"
         );
 
       const leaderboard =

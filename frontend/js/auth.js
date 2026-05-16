@@ -9,7 +9,7 @@ if (existingToken) {
     "./dashboard.html";
 
 }
-const API_URL = "http://localhost:8000/api/auth";
+const API_URL = "https://qore-backend.onrender.com";
 
 /* =========================
    SIGNUP

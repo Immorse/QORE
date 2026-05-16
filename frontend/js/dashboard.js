@@ -158,7 +158,7 @@ if (sessionForm) {
         const response =
           await fetch(
 
-            "http://localhost:8000/api/sessions/create",
+            "https://qore-backend.onrender.com",
 
             {
 
