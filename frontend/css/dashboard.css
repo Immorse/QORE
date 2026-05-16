@@ -1,0 +1,558 @@
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 280px 1fr;
+
+  gap: 30px;
+
+  padding: 25px;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 60px;
+}
+
+.sidebar-logo img {
+  width: 55px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar-nav a {
+  padding: 16px 18px;
+
+  border-radius: var(--radius-md);
+
+  color: var(--text-secondary);
+
+  transition: var(--transition-smooth);
+}
+
+.sidebar-nav a:hover,
+.active-link {
+  background: rgba(182, 35, 255, 0.12);
+
+  color: var(--text-primary);
+}
+
+.logout-btn {
+  width: 100%;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.dashboard-main {
+  padding: 10px;
+}
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 40px;
+}
+
+.dashboard-tag {
+  color: var(--hyper-magenta);
+
+  font-weight: 600;
+
+  margin-bottom: 10px;
+}
+
+.topbar h1 {
+  font-size: 3rem;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  padding: 30px;
+}
+
+.stat-card:hover{
+  box-shadow: var(--glow-magenta);
+  transform: scale(1.05);
+}
+
+.stat-card h3 {
+  color: var(--text-secondary);
+  
+  margin-bottom: 18px;
+
+  font-size: 1rem;
+}
+
+.stat-card h2 {
+  font-size: 2.2rem;
+}
+
+/* =========================
+   SUBJECTS
+========================= */
+
+.subjects-section {
+  margin-bottom: 40px;
+}
+
+.subject-card:hover{
+  box-shadow: var(--glow-magenta);
+  transform: scale(1.05);
+}
+
+.subjects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.subject-card {
+  padding: 30px;
+}
+
+.subject-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 24px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 14px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border-radius: 999px;
+
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.physics-progress {
+  width: 82%;
+  background: var(--hyper-magenta);
+}
+
+.chemistry-progress {
+  width: 71%;
+  background: var(--tropical-teal);
+}
+
+.maths-progress {
+  width: 90%;
+  background: var(--soft-fawn);
+}
+
+/* =========================
+   ACTIVITY
+========================= */
+
+.activity-card {
+  padding: 30px;
+}
+
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 22px 0;
+
+  border-bottom: 1px solid var(--border-color);
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-item h4 {
+  margin-bottom: 8px;
+}
+
+.activity-item p,
+.activity-item span {
+  color: var(--text-secondary);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+
+  .stats-grid,
+  .subjects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .stats-grid,
+  .subjects-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+
+  padding: 20px;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 600px;
+  padding: 35px;
+  animation: modalPop 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Space between header and form */
+  padding: 30px;
+}
+
+.modal-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.close-btn {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid var(--border-color);
+
+  color: white;
+
+  font-size: 1rem;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: var(--transition-smooth);
+}
+
+.close-btn:hover {
+  transform: rotate(90deg);
+
+  background: rgba(255,255,255,0.12);
+}
+
+textarea {
+  min-height: 140px;
+
+  padding: 18px;
+
+  border-radius: var(--radius-md);
+
+  border: 1px solid var(--border-color);
+
+  background: rgba(255,255,255,0.03);
+
+  color: var(--text-primary);
+
+  resize: none;
+
+  outline: none;
+
+  font-family: var(--font-body);
+
+  transition: var(--transition-smooth);
+}
+
+textarea:focus {
+  border-color: var(--hyper-magenta);
+
+  box-shadow: var(--glow-magenta);
+}
+
+@keyframes modalPop {
+
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+.hidden {
+  display: none;
+}
+/* =========================
+   MODAL INPUTS
+========================= */
+
+.session-form input,
+.session-form select,
+.session-form textarea {
+  width: 100%;
+
+  min-height: 60px;
+
+  padding: 0 18px;
+
+  border-radius: var(--radius-md);
+
+  border: 1px solid var(--border-color);
+
+  background: rgba(255,255,255,0.04);
+
+  color: var(--text-primary);
+
+  outline: none;
+
+  font-size: 1rem;
+
+  font-family: var(--font-body);
+
+  transition: var(--transition-smooth);
+
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.session-form textarea {
+  padding-top: 18px;
+  min-height: 140px;
+
+  resize: none;
+}
+
+.session-form input:focus,
+.session-form select:focus,
+.session-form textarea:focus {
+  border-color: var(--hyper-magenta);
+
+  box-shadow: var(--glow-magenta);
+}
+
+.session-form select {
+  cursor: pointer;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--hyper-magenta) 50%),
+    linear-gradient(135deg, var(--hyper-magenta) 50%, transparent 50%);
+
+  background-position:
+    calc(100% - 20px) calc(50% - 3px),
+    calc(100% - 14px) calc(50% - 3px);
+
+  background-size: 6px 6px;
+
+  background-repeat: no-repeat;
+}
+
+/* =========================
+   FORCE MODAL VISIBILITY
+========================= */
+
+.modal-content * {
+  color: white !important;
+}
+
+#close-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.close-btn {
+  color: white !important;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  background: rgba(255,255,255,0.08);
+
+  cursor: pointer;
+}
+
+.primary-btn {
+  color: white !important;
+}
+/* =========================
+   NUCLEAR MODAL FIX
+========================= */
+
+.modal-content {
+  background: #111111 !important;
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  color: white !important;
+
+  opacity: 1 !important;
+}
+
+.modal-content h2,
+.modal-content label,
+.modal-content p,
+.modal-content span,
+.modal-content button {
+  color: white !important;
+
+  opacity: 1 !important;
+}
+
+.close-btn {
+  width: 42px !important;
+  height: 42px !important;
+
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  border-radius: 50% !important;
+
+  background: #222 !important;
+
+  border: 1px solid rgba(255,255,255,0.2) !important;
+
+  color: white !important;
+
+  font-size: 18px !important;
+
+  cursor: pointer !important;
+}
+
+.primary-btn {
+  color: white !important;
+}
+
+/* Layout for the Modal Container */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 30px;
+}
+
+/* Form Spacing */
+.session-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Spacing between Label and Input */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Close button positioning */
+.modal-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

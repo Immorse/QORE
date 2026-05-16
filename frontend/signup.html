@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>QORE Signup</title>
+
+  <link
+    rel="stylesheet"
+    href="./css/style.css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="./css/auth.css"
+  />
+
+</head>
+
+<body>
+
+  <!-- GLOW -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <section class="auth-page">
+
+    <!-- LEFT -->
+    <div class="auth-left">
+
+      <div>
+
+        <p class="auth-tag">
+          one-more-question
+        </p>
+
+        <h1>
+          Join The Competitive Grind
+        </h1>
+
+        <p class="auth-description">
+          Create your QORE profile and start climbing the leaderboard.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="auth-right">
+
+      <form
+        id="signup-form"
+        class="auth-card glass-card"
+      >
+
+        <h2>
+          Create Account
+        </h2>
+
+        <!-- NAME -->
+
+        <div class="input-group">
+
+          <label for="signup-name">
+            Display Name
+          </label>
+
+          <input
+            id="signup-name"
+            type="text"
+            placeholder="Enter display name"
+            required
+          />
+
+        </div>
+
+        <!-- EMAIL -->
+
+        <div class="input-group">
+
+          <label for="signup-email">
+            Email
+          </label>
+
+          <input
+            id="signup-email"
+            type="email"
+            placeholder="Enter your email"
+            required
+          />
+
+        </div>
+
+        <!-- PASSWORD -->
+
+        <div class="input-group">
+
+          <label for="signup-password">
+            Password
+          </label>
+
+          <input
+            id="signup-password"
+            type="password"
+            placeholder="Create password"
+            required
+          />
+
+        </div>
+
+        <!-- EXAM -->
+
+        <div class="input-group">
+
+          <label for="signup-exam">
+            Preparing For
+          </label>
+
+          <select id="signup-exam">
+
+            <option>
+              🎓 JEE
+            </option>
+
+            <option>
+              🩺 NEET
+            </option>
+
+            <option>
+              📚 Boards
+            </option>
+
+          </select>
+
+        </div>
+
+        <!-- BUTTON -->
+
+        <button
+          type="submit"
+          class="primary-btn auth-btn"
+        >
+          Create Account
+        </button>
+
+        <!-- SWITCH -->
+
+        <p class="auth-switch">
+
+          Already have an account?
+
+          <a href="./login.html">
+            Login
+          </a>
+
+        </p>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <script src="./js/app.js"></script>
+  <script src="./js/auth.js"></script>
+
+</body>
+
+</html>

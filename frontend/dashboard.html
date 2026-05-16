@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>QORE Dashboard</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link rel="stylesheet" href="./css/dashboard.css" />
+  </head>
+
+  <body>
+    <!-- Glow Orbs -->
+
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <section class="dashboard">
+      <!-- SIDEBAR -->
+
+      <aside class="sidebar glass-card">
+        <div>
+          <!-- LOGO -->
+
+          <div class="sidebar-logo">
+            <a
+              href="index.html"
+              style="text-decoration: none; display: inline-block"
+            >
+              <img
+                src="./assets/logo/logo.png"
+                alt="QORE Logo"
+                style="cursor: pointer"
+              />
+            </a>
+
+            <h2>
+              <a
+                href="index.html"
+                style="text-decoration: none; color: inherit"
+              >
+                QORE
+              </a>
+            </h2>
+          </div>
+
+          <!-- NAV -->
+
+          <nav class="sidebar-nav">
+            <a class="active-link" href="#"> 🏠 Dashboard </a>
+
+            <a href="./leaderboard.html"> 🏆 Leaderboard </a>
+
+            <a href="#"> 👤 Profile </a>
+
+            <a href="#"> 📊 Analytics </a>
+
+            <a href="#"> ⚙️ Settings </a>
+          </nav>
+        </div>
+
+        <!-- LOGOUT -->
+
+        <button id="logout-btn" class="secondary-btn logout-btn">Logout</button>
+      </aside>
+
+      <!-- MAIN -->
+
+      <main class="dashboard-main">
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+          <div>
+            <p class="dashboard-tag">Welcome Back 👋</p>
+
+            <h1 id="dashboard-username">User</h1>
+          </div>
+
+          <button id="theme-toggle" class="theme-toggle">🌙</button>
+        </div>
+
+        <!-- STATS -->
+
+        <section class="stats-grid">
+          <div class="stat-card glass-card">
+            <h3>Total Questions</h3>
+
+            <h2 id="total-questions">
+  0
+</h2>
+          </div>
+
+          <div class="stat-card glass-card">
+            <h3>Current Rank</h3>
+
+            <h2>#14</h2>
+          </div>
+
+          <div class="stat-card glass-card">
+            <h3>Daily Streak</h3>
+
+            <h2 id="streak-count">
+  0 Days
+</h2>
+          </div>
+
+          <div class="stat-card glass-card">
+            <h3>Tier</h3>
+
+            <h2>Diamond</h2>
+          </div>
+        </section>
+
+        <!-- SUBJECTS -->
+
+        <section class="subjects-section">
+          <div class="subjects-header">
+            <h2>Subject Tracking</h2>
+
+            <button type="button" id="open-modal" class="primary-btn">
+              Add Session
+            </button>
+          </div>
+
+          <div class="subjects-grid">
+            <!-- PHYSICS -->
+
+            <div class="subject-card glass-card">
+              <div class="subject-top">
+                <h3>⚛️ Physics</h3>
+
+                <span id="physics-count">
+  0 Qs
+</span>
+              </div>
+
+              <div class="progress-bar">
+                <div class="progress-fill physics-progress"></div>
+              </div>
+            </div>
+
+            <!-- CHEMISTRY -->
+
+            <div class="subject-card glass-card">
+              <div class="subject-top">
+                <h3>🧪 Chemistry</h3>
+
+                <span id="chemistry-count">
+  0 Qs
+</span>
+              </div>
+
+              <div class="progress-bar">
+                <div class="progress-fill chemistry-progress"></div>
+              </div>
+            </div>
+
+            <!-- MATHS -->
+
+            <div class="subject-card glass-card">
+              <div class="subject-top">
+                <h3>📐 Mathematics</h3>
+
+                <span id="maths-count">
+  0 Qs
+</span>
+              </div>
+
+              <div class="progress-bar">
+                <div class="progress-fill maths-progress"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ACTIVITY -->
+
+        <section class="activity-section">
+          <div class="subjects-header">
+            <h2>Recent Activity</h2>
+          </div>
+
+          <div
+  id="activity-list"
+  class="activity-card glass-card"
+>
+            <div class="activity-item">
+              <div>
+                <h4>Physics Practice</h4>
+
+                <p>Completed 120 Questions</p>
+              </div>
+
+              <span> 2h ago </span>
+            </div>
+
+            <div class="activity-item">
+              <div>
+                <h4>Chemistry Revision</h4>
+
+                <p>Completed 80 Questions</p>
+              </div>
+
+              <span> 5h ago </span>
+            </div>
+
+            <div class="activity-item">
+              <div>
+                <h4>Maths Mock Test</h4>
+
+                <p>Completed 150 Questions</p>
+              </div>
+
+              <span> Yesterday </span>
+            </div>
+          </div>
+        </section>
+      </main>
+    </section>
+
+    <!-- MODAL -->
+
+    <div id="session-modal" class="modal hidden">
+      <div class="modal-content glass-card">
+        <div class="modal-top">
+          <h2>Add Study Session</h2>
+
+          <button type="button" id="close-modal" class="close-btn">
+            &times;
+          </button>
+        </div>
+
+        <!-- FORM -->
+
+        <form id="session-form" class="session-form">
+          <!-- SUBJECT -->
+
+          <div class="input-group">
+            <label> Subject </label>
+
+            <select id="session-subject">
+              <option>⚛️ Physics</option>
+
+              <option>🧪 Chemistry</option>
+
+              <option>📐 Mathematics</option>
+            </select>
+          </div>
+
+          <!-- QUESTIONS -->
+
+          <div class="input-group">
+            <label> Questions Solved </label>
+
+            <input
+              id="session-questions"
+              type="number"
+              placeholder="Enter question count"
+            />
+          </div>
+
+          <!-- NOTES -->
+
+          <div class="input-group">
+            <label> Session Notes </label>
+
+            <textarea
+              id="session-notes"
+              placeholder="Topics, mistakes, learnings..."
+            ></textarea>
+          </div>
+
+          <!-- BUTTON -->
+
+          <button type="submit" class="primary-btn auth-btn">
+            Save Session
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+
+    <script src="./js/app.js"></script>
+
+    <script src="./js/dashboard.js"></script>
+  </body>
+</html>

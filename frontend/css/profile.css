@@ -1,0 +1,194 @@
+/* =========================
+   PROFILE PAGE
+========================= */
+
+.profile-page {
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+/* =========================
+   TOP CARD
+========================= */
+
+.profile-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 40px;
+
+  margin-bottom: 40px;
+}
+
+.profile-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.profile-avatar {
+  width: 140px;
+  height: 140px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 4px solid rgba(182, 35, 255, 0.4);
+}
+
+.profile-tag {
+  color: var(--hyper-magenta);
+
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  margin-bottom: 14px;
+}
+
+.profile-left h1 {
+  font-size: 3.5rem;
+
+  margin-bottom: 18px;
+}
+
+.profile-bio {
+  color: var(--text-secondary);
+
+  max-width: 600px;
+
+  line-height: 1.8;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+
+  margin-bottom: 40px;
+}
+
+.profile-stat {
+  padding: 30px;
+}
+
+.profile-stat h3 {
+  color: var(--text-secondary);
+
+  margin-bottom: 16px;
+
+  font-size: 1rem;
+}
+
+.profile-stat h2 {
+  font-size: 2.2rem;
+}
+
+/* =========================
+   BREAKDOWN
+========================= */
+
+.subject-breakdown {
+  padding: 35px;
+
+  margin-bottom: 40px;
+}
+
+.section-title {
+  margin-bottom: 30px;
+}
+
+.breakdown-item {
+  margin-bottom: 28px;
+}
+
+.breakdown-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 14px;
+}
+
+/* =========================
+   ACTIVITY
+========================= */
+
+.profile-activity {
+  padding: 35px;
+}
+
+.activity-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 22px 0;
+
+  border-bottom: 1px solid var(--border-color);
+}
+
+.activity-line:last-child {
+  border-bottom: none;
+}
+
+.activity-line h4 {
+  margin-bottom: 8px;
+}
+
+.activity-line p,
+.activity-line span {
+  color: var(--text-secondary);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+  .profile-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 800px) {
+
+  .profile-top {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 30px;
+  }
+
+  .profile-left {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-left h1 {
+    font-size: 2.8rem;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .profile-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-line {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+}

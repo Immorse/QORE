@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>QORE</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <!-- Background Orbs -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo-section">
+        <img src="assets/logo/logo.png" alt="QORE Logo" class="logo" />
+
+        <h2>QORE</h2>
+      </div>
+
+      <div class="nav-links">
+        <a href="#">Leaderboard</a>
+        <a href="#features">Features</a>
+        <a href="./login.html">Login</a>
+
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
+
+        <a href="./signup.html" class="primary-btn"> Sign Up </a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero container">
+      <!-- LEFT -->
+      <div class="hero-left">
+        <p class="tagline">one-more-question</p>
+
+        <h1>
+          Track Your Grind.<br />
+          Climb The Leaderboard.
+        </h1>
+
+        <p class="hero-description">
+          QORE helps students compete, track progress, and dominate rankings
+          through consistent practice.
+        </p>
+
+        <div class="hero-buttons">
+          <button class="primary-btn">Start Solving</button>
+
+          <button class="secondary-btn">View Leaderboard</button>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="hero-right">
+        <div class="leaderboard-preview glass-card">
+          <div class="leaderboard-header">
+            <h3>Top Performers</h3>
+
+            <span class="live-badge"> LIVE </span>
+          </div>
+
+          <!-- User -->
+          <div class="leaderboard-user rank-1">
+            <div class="user-left">
+              <div class="rank-number">#1</div>
+
+              <img
+                src="https://i.pravatar.cc/150?img=12"
+                alt=""
+                class="avatar"
+              />
+
+              <div>
+                <h4>Piyush</h4>
+
+                <p>Diamond Tier</p>
+              </div>
+            </div>
+
+            <div class="question-count">12,480 Qs</div>
+          </div>
+
+          <!-- User -->
+          <div class="leaderboard-user">
+            <div class="user-left">
+              <div class="rank-number">#2</div>
+
+              <img
+                src="https://i.pravatar.cc/150?img=15"
+                alt=""
+                class="avatar"
+              />
+
+              <div>
+                <h4>Deepak</h4>
+
+                <p>Platinum Tier</p>
+              </div>
+            </div>
+
+            <div class="question-count">11,930 Qs</div>
+          </div>
+
+          <!-- User -->
+          <div class="leaderboard-user">
+            <div class="user-left">
+              <div class="rank-number">#3</div>
+
+              <img
+                src="https://i.pravatar.cc/150?img=18"
+                alt=""
+                class="avatar"
+              />
+
+              <div>
+                <h4>Asmanja</h4>
+
+                <p>Gold Tier</p>
+              </div>
+            </div>
+
+            <div class="question-count">10,210 Qs</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FEATURES SECTION -->
+    <section class="features container" id="features">
+
+      <div class="section-heading">
+        <p class="section-tag">WHY QORE</p>
+
+        <h2>Built For Competitive Students</h2>
+      </div>
+
+      <div class="features-grid">
+        <!-- CARD -->
+        <div class="feature-card glass-card">
+          <div class="feature-icon">📈</div>
+
+          <h3>Track Progress</h3>
+
+          <p>
+            Monitor your daily question count, streaks, and long-term
+            consistency.
+          </p>
+        </div>
+
+        <!-- CARD -->
+        <div class="feature-card glass-card">
+          <div class="feature-icon">🏆</div>
+
+          <h3>Compete Globally</h3>
+
+          <p>
+            Compare yourself against top students through dynamic leaderboards.
+          </p>
+        </div>
+
+        <!-- CARD -->
+        <div class="feature-card glass-card">
+          <div class="feature-icon">⚡</div>
+
+          <h3>Stay Consistent</h3>
+
+          <p>
+            Build momentum with streak systems, rank progression, and analytics.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIER SECTION -->
+    <section class="tiers container">
+      <div class="section-heading">
+        <p class="section-tag">RANK TIERS</p>
+
+        <h2>Climb The Competitive Ladder</h2>
+      </div>
+
+      <div class="tier-grid">
+        <div class="tier-card bronze">Bronze</div>
+
+        <div class="tier-card silver">Silver</div>
+
+        <div class="tier-card gold">Gold</div>
+
+        <div class="tier-card diamond">Diamond</div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section container glass-card">
+      <h2>Ready To Reach The Top?</h2>
+
+      <p>Join QORE and start tracking your grind today.</p>
+
+      <button class="primary-btn">Start Solving</button>
+    </section>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
